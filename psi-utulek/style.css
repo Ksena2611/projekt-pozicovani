@@ -1,5 +1,12 @@
-html { box-sizing: border-box; }
-*, ::after, ::before { box-sizing: inherit; }
+html {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
 
 :root {
   --page-bg-color: #a19393;
@@ -64,30 +71,46 @@ body {
 
 .intro__title {
   margin-top: 0;
-	font-size: 2em;
-	text-align: center;
+  font-size: 2em;
+  text-align: center;
 }
 
 .dog {
   margin-block: 60px;
   display: flex;
   gap: 30px;
+
 }
+
+.obsah {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
 
 .dog:nth-child(odd) {
   flex-direction: row-reverse;
 }
+   
 
 .dog__image {
   width: 200px;
   text-align: center;
+     
 }
+.dog__image {
+  position: sticky;
+  top: 20px;       /* відступ зверху */
+  align-self: flex-start; /* важливо для flex */
+}
+
 
 .dog__description {
   padding: 40px;
   border-radius: 20px 20px 80px 20px;
   color: black;
   background: var(--dog-bg-color-1);
+
 }
 
 .dog:nth-child(odd) .dog__description {
@@ -102,5 +125,3 @@ body {
 .dog__description :last-child {
   margin-bottom: 0;
 }
-
-
